@@ -47,123 +47,150 @@ SELECT column1, column2 FROM table_name WHERE condition;
 ```
 **Question 1**
 --
--- Paste Question 1 here
-
+Write a SQL statement to Update the product_name to 'Premium Bread' whose product
+ID is 5 in the products table. Products table
 ```sql
--- Paste your SQL code below for Question 1
+update products set product_name ='Premium Bread' where product_id=5;
 ```
 
 **Output:**
 
-![Output1](output.png)
+<img width="758" height="299" alt="image" src="https://github.com/user-attachments/assets/451cc67e-500e-40c2-afec-bad4d4d2b371" />
 
 **Question 2**
 ---
--- Paste Question 2 here
+Write a SQL statement to Update the grade of all customers in Chennai city as 5.
+Customer table (customer_id,cust_name,city,grade,salesman_id)
 
 ```sql
--- Paste your SQL code below for Question 2
+update Customer set grade=5 where city='Chennai';
 ```
 
 **Output:**
 
-![Output2](output.png)
+<img width="766" height="343" alt="image" src="https://github.com/user-attachments/assets/5a593e2c-4b7a-400a-a062-36652a2ab306" />
 
 **Question 3**
 ---
--- Paste Question 3 here
+Salary will be increased by 25% for the department 40, 15% for department 90 and 10%
+for the department 110 and the rest of the departments will remain same. Employees
+table
 
 ```sql
--- Paste your SQL code below for Question 3
+update Employees set salary=salary+salary*0.25 where department_id=40;
+update Employees set salary=salary+salary*0.15 where department_id=90;
+update Employees set salary=salary+salary*0.1 where department_id=110;
 ```
 
 **Output:**
 
-![Output3](output.png)
+<img width="781" height="334" alt="image" src="https://github.com/user-attachments/assets/fc80ab51-ae47-4d3b-b99e-e18c0dfecaac" />
 
 **Question 4**
 ---
--- Paste Question 4 here
-
+Write a SQL query to Delete all Doctors whose Specialization is either 'Pediatrics' or
+'Cardiology' and Last Name is Brown. Sample table: Doctors attributes : doctor_id,
+first_name, last_name, specialization
 ```sql
--- Paste your SQL code below for Question 4
+DELETE FROM Doctors
+WHERE last_name = 'Brown'
+  AND specialization IN ('Pediatrics', 'Cardiology');
 ```
 
 **Output:**
 
-![Output4](output.png)
+<img width="774" height="612" alt="image" src="https://github.com/user-attachments/assets/10d16cf0-1bdd-458a-b75b-3022b3ed80c8" />
 
 **Question 5**
 ---
--- Paste Question 5 here
-
+Write a SQL query to Delete customers from 'customer' table where 'CUST_CITY' is not
+'New York' and 'OUTSTANDING_AMT' is greater than 5000. Sample table: Customer
 ```sql
--- Paste your SQL code below for Question 5
+delete from Customer where CUST_CITY!='New York' and OUTSTANDING_AMT>5000;
 ```
 
 **Output:**
 
-![Output5](output.png)
+<img width="777" height="431" alt="image" src="https://github.com/user-attachments/assets/f04211df-d0dc-4158-9248-f76c7d77096d" />
 
 **Question 6**
 ---
--- Paste Question 6 here
-
+Write a SQL query to Delete customers with 'GRADE' 3 or 'AGENT_CODE' 'A008' whose
+'OUTSTANDING_AMT' is less than 5000 Sample table: Customer
 ```sql
--- Paste your SQL code below for Question 6
+DELETE FROM Customer
+WHERE (grade = 3 OR agent_code = 'A008')
+  AND outstanding_amt < 5000;
 ```
 
 **Output:**
 
-![Output6](output.png)
+<img width="773" height="303" alt="image" src="https://github.com/user-attachments/assets/3247b3e9-1e3b-4606-9042-fd35c16b3c81" />
 
 **Question 7**
 ---
--- Paste Question 7 here
+Write a query to fetch last 5 rows in EmployeeInfo table.
 
 ```sql
--- Paste your SQL code below for Question 7
+select*from Employeeinfo order by EmpID desc limit 5;
 ```
 
 **Output:**
 
-![Output7](output.png)
+<img width="776" height="252" alt="image" src="https://github.com/user-attachments/assets/d533e8d9-7008-467d-a87e-18a3a74ec704" />
 
 **Question 8**
 ---
--- Paste Question 8 here
-
+Write a query to get all the records from EmployeePosition table who have joined in the
+year 2020.
 ```sql
--- Paste your SQL code below for Question 8
+SELECT *
+FROM EmployeePosition
+WHERE YEAR(JoinDate) = 2020;
 ```
 
 **Output:**
 
-![Output8](output.png)
+<img width="778" height="240" alt="image" src="https://github.com/user-attachments/assets/35d30f07-5ca4-4b9f-8de4-8eddd38a8aaf" />
 
 **Question 9**
 ---
--- Paste Question 9 here
+Write a SQL query to label rows in the Calculations table as 'Even' if value1 is even,
+otherwise 'Odd'.
 
 ```sql
--- Paste your SQL code below for Question 9
+SELECT id,
+value1,
+case
+when value1%2=0 then 'Even'
+ELSE 'Odd'
+end as parity
+from Calculations;
 ```
 
 **Output:**
 
-![Output9](output.png)
+<img width="793" height="396" alt="image" src="https://github.com/user-attachments/assets/bbc73e19-54ea-40bc-874e-d072b086d2ba" />
 
 **Question 10**
 ---
--- Paste Question 10 here
+Write a query to calculate the discounted_price and discounted_price_percentage for
+each product from the products table. Return product_id, original_price,
+discount_percentage, discounted_price, and discounted_price_percentage. Discounted
+Price: Calculate the price of the product after applying the discount. Discounted Price
+Percentage: Calculate the percentage that the discounted price represents relative to
+the original price.
 
 ```sql
--- Paste your SQL code below for Question 10
+select product_id,original_price,discount_percentage,(original_price-(origi
+cast(round(((original_price-(original_price*discount_percentage))/original_
+from products;
 ```
 
 **Output:**
 
-![Output10](output.png)
+<img width="773" height="250" alt="image" src="https://github.com/user-attachments/assets/9337d310-4dd4-4f22-99a2-a89ed1cf2c28" />
+<img width="767" height="111" alt="image" src="https://github.com/user-attachments/assets/030ef92e-4adf-4e7e-84bc-feefa265d819" />
 
 ## RESULT
 Thus, the SQL queries to implement DML commands have been executed successfully.
