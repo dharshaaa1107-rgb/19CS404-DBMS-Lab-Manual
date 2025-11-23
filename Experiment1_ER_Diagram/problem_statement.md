@@ -23,30 +23,24 @@ FlexiFit Gym wants a database to manage its members, trainers, and fitness progr
 
 ### ER Diagram:
 *Paste or attach your diagram here*  
-![ER Diagram](er_diagram_fitness.png)
+<img width="818" height="803" alt="image" src="https://github.com/user-attachments/assets/a5c4bb38-5cea-4707-b40c-cf19380aba2c" />
 
 ### Entities and Attributes
+<img width="777" height="348" alt="image" src="https://github.com/user-attachments/assets/fd371ab3-fef6-4168-a16d-e4a1dcff63c2" />
+<img width="779" height="345" alt="image" src="https://github.com/user-attachments/assets/fd3e6624-7c4b-417e-97c0-269a7a9d1437" />
 
-| Entity | Attributes (PK, FK) | Notes |
-|--------|--------------------|-------|
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
+
 
 ### Relationships and Constraints
+<img width="779" height="778" alt="image" src="https://github.com/user-attachments/assets/26b77101-8a94-4e9f-9829-1db7ac3f6d37" />
 
-| Relationship | Cardinality | Participation | Notes |
-|--------------|------------|---------------|-------|
-|              |            |               |       |
-|              |            |               |       |
-|              |            |               |       |
 
 ### Assumptions
-- 
-- 
-- 
+Client is the central entity.
+Membership, Payment, Schedule, Transaction Records, Reports all depend on Client.
+Trainor connects with Schedule.
+Reports depend on Transaction Records + Client.
+
 
 ---
 
